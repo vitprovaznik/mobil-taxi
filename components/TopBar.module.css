@@ -1,0 +1,23 @@
+.topbar{
+    background-color: var(--dark-gray, #222222);
+    display: flex;
+    justify-content: center;
+    padding: .7rem 1rem;
+    border-bottom: .2px solid var(--light-gray, #f0f0f0);
+}
+.item{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--light, #ffffff);
+    font-weight: 600;
+}
+.icon{
+    background-color: var(--light-gray, #f0f0f0);
+    padding: 2px 7px;
+    border-radius: 100rem;
+    color: var(--dark-gray, #222222);
+    font-size: 8px;
+    font-weight: 800;
+}

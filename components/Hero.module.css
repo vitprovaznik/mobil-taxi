@@ -1,0 +1,32 @@
+.hero {
+  padding: 2rem 1rem;
+  padding-bottom: 4rem;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000034-5d5f25d5f3/IMG-20241210-WA0005.webp?ph=f3be96abaf);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.title {
+  color: var(--primary, #fbc02c);
+}
+.description {
+  font-size: 1.125rem;
+}
+.button {
+  color: var(--dark, #000000);
+  background-color: var(--primary, #fbc02c);
+  border-radius: 100rem;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  width: fit-content;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--light-gray, #818a99);
+}

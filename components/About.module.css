@@ -1,0 +1,41 @@
+.about{
+    padding: 2rem 1rem;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.title{
+    font-size: 1.4rem;
+    color: var(--primary, #fbc02c);
+}
+.description{
+    font-size: 1.125rem;
+}
+.button{
+    color: var(--light, #ffffff);
+  background-color: transparent;
+  border-radius: 100rem;
+  font-size: 1.125rem;
+  padding: 1rem 3rem;
+  width: fit-content;
+  border: 1px solid var(--primary, #fbc02c);
+  transition: border 0.3s ease;
+  cursor: pointer;
+}
+.button:hover {
+  border: 1px solid var(--light, #ffffff);
+}
+.figure {
+    margin: 3rem 0 0 0;
+}
+.image{
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+}
+.caption {
+    text-align: center;
+    margin-top: .5rem;
+}

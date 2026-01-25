@@ -1,0 +1,7 @@
+.pricing {
+  margin-top: 6rem;
+  padding: 0 0.5rem;
+}
+.title {
+  color: var(--primary, #fbc02c);
+}
