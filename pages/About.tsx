@@ -2,6 +2,7 @@ import SectionTitle from "@/components/SectionTitle";
 import styles from "./About.module.css";
 import Button from "@/components/Button";
 import Paragraph from "@/components/Paragraph";
+import Figure from "@/components/Figure";
 
 export default function About() {
   return (
@@ -29,30 +30,14 @@ export default function About() {
           inlinePadding="3rem"
         />
       </div>
-      <figure className={styles.figure}>
-        <img
-          className={styles.image}
-          src="https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000065-ec937ec93b/car%203%20-%20g.jpeg?ph=f3be96abaf"
-          alt="Mobil Taxi Jablonec nad Nisou, Škoda Kodiaq"
-          width="810"
-          height="1080"
-          loading="lazy"
-        />
-        <figcaption className={styles.caption}>
-          Mobil Taxi Jablonec nad Nisou, Škoda Kodiaq
-        </figcaption>
-      </figure>
-      <figure className={styles.figure}>
-        <img
-          className={styles.image}
-          src="https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000051-cde14cde16/interier.jpeg?ph=f3be96abaf"
-          alt="Mobil Taxi Jablonec nad Nisou, Výbava 1"
-          width="810"
-          height="1080"
-          loading="lazy"
-        />
-        <figcaption className={styles.caption}>Výbava</figcaption>
-      </figure>
+      <Figure
+        captionText="Mobil Taxi Jablonec nad Nisou, Škoda Kodiaq"
+        imageSrc="https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000065-ec937ec93b/car%203%20-%20g.jpeg?ph=f3be96abaf"
+      />
+      <Figure
+        captionText="Mobil Taxi Jablonec nad Nisou, Výbava"
+        imageSrc="https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000051-cde14cde16/interier.jpeg?ph=f3be96abaf"
+      />
     </section>
   );
 }

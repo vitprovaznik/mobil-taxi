@@ -1,0 +1,11 @@
+.figure {
+  margin: 3rem 0 0 0;
+  text-align: center;
+}
+.image {
+  border-radius: 1rem;
+}
+.caption {
+  text-align: center;
+  margin-top: 0.5rem;
+}
