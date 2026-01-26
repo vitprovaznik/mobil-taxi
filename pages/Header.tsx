@@ -2,9 +2,10 @@
 import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 interface HeaderProps {
-  activePage?: string; // Changed to string to match URL paths
+  activePage?: string; 
 }
 
 export default function Header({ activePage }: HeaderProps) {
@@ -14,7 +15,6 @@ export default function Header({ activePage }: HeaderProps) {
     setIsOpen(!isOpen);
   };
 
-  // Prevent scrolling when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -28,7 +28,6 @@ export default function Header({ activePage }: HeaderProps) {
 
   return (
     <div className={styles.headerContainer}>
-      {/* Backdrop Overlay - Closes menu when clicked */}
       <div
         className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ""}`}
         onClick={() => setIsOpen(false)}
@@ -36,12 +35,14 @@ export default function Header({ activePage }: HeaderProps) {
 
       <div className={styles.header}>
         <div className={styles.logo}>
-          <img
-            src="https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000055-855ca855cc/logo%20mobiltaxi.png?ph=f3be96abaf"
-            alt="Logo Mobil Taxi"
-            width="58"
-            height="58"
-          />
+          <Link href="/">
+            <Image
+              src="https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000055-855ca855cc/logo%20mobiltaxi.png?ph=f3be96abaf"
+              alt="Logo Mobil Taxi"
+              width="58"
+              height="58"
+            />
+          </Link>
           <p className={styles.title}>Mobil Taxi Jablonec nad Nisou</p>
         </div>
         <nav className={styles.nav}>

@@ -51,6 +51,7 @@ export default function Pricing() {
           </li>
         </ul>
       </div>
+      {/* Misto tohole iFrame */}
       <Image src="https://i.pinimg.com/736x/b1/e4/88/b1e4882f556bb0e24decb847e1873e14.jpg" alt="Shaq Timeout" className={styles.image} layout="responsive" width={810} height={1080} />
     </section>
   );

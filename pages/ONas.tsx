@@ -2,7 +2,6 @@ import styles from "./ONas.module.css";
 import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 import Paragraph from "@/components/Paragraph";
-import Footer from "./Footer";
 
 export default function ONas() {
   return (
@@ -19,7 +18,7 @@ export default function ONas() {
         <div className={`${styles.imageContainer} ${styles.flexRow}`}>
           <Image
             src="/onas-1.jpg"
-            alt="Taxi"
+            alt="Mobil Taxi Jablonec nad Nisou, Škoda Kodiaq"
             width={500}
             height={300}
             layout="responsive"
@@ -35,16 +34,17 @@ export default function ONas() {
             na letiště, nádraží, do nemocnice nebo kamkoli jinam potřebujete.
           </Paragraph>
         </div>
-        <div className={`${styles.imageContainer} ${styles.flexRow2}`}>
+        <div className={`${styles.imageContainer} ${styles.historyRow}`}>
           <Image
             src="https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000067-532ca532cb/car%204%20-%20g.jpeg?ph=f3be96abaf"
-            alt="Taxi"
-            width={500}
-            height={300}
+            alt="Mobil Taxi Jablonec nad Nisou, Škoda Superb L&K"
+            width={800}
+            height={1000}
             layout="responsive"
             className={styles.image}
           />
-          <div className={`${styles.imageContainer} ${styles.history}`}>
+
+          <div className={`${styles.imageContainer} ${styles.historyContent}`}>
             <SectionTitle text="Historie" />
             <Paragraph fontWeight="500">
               MobilTaxi byla založena v roce 1991 v Jablonci nad Nisou. Naše
@@ -57,7 +57,7 @@ export default function ONas() {
             </Paragraph>
             <Image
               src="https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000080-a2ef4a2ef7/taxi.jpeg?ph=f3be96abaf"
-              alt="Taxi"
+              alt="Mobil Taxi Jablonec nad Nisou, Škoda Kodiaq"
               width={500}
               height={300}
               layout="responsive"
@@ -66,7 +66,7 @@ export default function ONas() {
           </div>
         </div>
       </div>
-      <Footer />
+ 
     </section>
   );
 }

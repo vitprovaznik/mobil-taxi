@@ -1,14 +1,14 @@
 import TopBar from "@/pages/TopBar";
 import Header from "@/pages/Header";
-import ONas from "@/pages/ONas";
 import Footer from "@/pages/Footer";
+import SLuzby from "@/pages/Sluzby";
 
-export default function Onas() {
+export default function Sluzby() {
   return (
     <>
       <TopBar />
-      <Header activePage="/onas" />
-      <ONas />
+      <Header activePage="/sluzby" />
+      <SLuzby />
       <Footer />
     </>
   );
