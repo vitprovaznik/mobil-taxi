@@ -1,11 +1,11 @@
 import Image from "next/image";
-import TopBar from "@/components/TopBar";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Review from "@/components/Review";
-import Services from "@/components/Services";
-import Pricing from "@/components/Pricing";
+import TopBar from "@/pages/TopBar";
+import Header from "@/pages/Header";
+import Hero from "@/pages/Hero";
+import About from "@/pages/About";
+import Review from "@/pages/Review";
+import Services from "@/pages/Services";
+import Pricing from "@/pages/Pricing";
 
 export default function Home() {
   return (

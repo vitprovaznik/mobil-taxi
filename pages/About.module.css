@@ -1,0 +1,20 @@
+.about{
+    padding: 2rem 1rem;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.figure {
+    margin: 3rem 0 0 0;
+}
+.image{
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+}
+.caption {
+    text-align: center;
+    margin-top: .5rem;
+}

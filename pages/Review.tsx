@@ -1,9 +1,12 @@
 import styles from "./Review.module.css";
+import SectionTitle from "@/components/SectionTitle";
+import Paragraph from "@/components/Paragraph";
+
 
 export default function Review() {
   return (
     <section className={styles.review}>
-      <h2 className={styles.title}>Recenze</h2>
+      <SectionTitle text="Recenze" color="var(--color-primary)" />
       <div className={styles.content}>
         <figure className={styles.figure}>
           <img
@@ -15,10 +18,10 @@ export default function Review() {
           ></img>
 
           <blockquote className={styles.blockquote}>
-            <p>
+            <Paragraph fontSize="1rem">
               "Super odvoz z Jablonce do Prahy na letiště. Nejlepší taxi v
               Jablonci!"
-            </p>
+            </Paragraph>
           </blockquote>
         </figure>
         <figure className={styles.figure}>
@@ -31,9 +34,9 @@ export default function Review() {
           ></img>
 
           <blockquote className={styles.blockquote}>
-            <p>
+            <Paragraph fontSize="1rem">
               "Příjemný řidič a ještě lepší servis. Jízda byla bezpečná a řidič se vyznal v okolí a díky tomu jsem stihl vlak. A cena mě taky mile překvapila."
-            </p>
+            </Paragraph>
           </blockquote>
         </figure>
         <figure className={styles.figure}>
@@ -46,11 +49,11 @@ export default function Review() {
           ></img>
 
           <blockquote className={styles.blockquote}>
-            <p>
+            <Paragraph fontSize="1rem">
               "Velice nadstandardní služby, rychlost a ochota. Mohu jen doporučit.
               <br />
               Jízdou po Praze bez problémů vyzná se a hlavně mluvící česky"
-            </p>
+            </Paragraph>
           </blockquote>
         </figure>
       </div>

@@ -1,15 +1,18 @@
+import Paragraph from "@/components/Paragraph";
 import styles from "./Services.module.css";
+import SectionTitle from "@/components/SectionTitle";
+import Button from "@/components/Button";
 
 export default function Services() {
   return (
     <section className={styles.services}>
-      <h2 className={styles.title}>Naše služby</h2>
-      <p className={styles.description}>
+      <SectionTitle text="Naše služby" color="var(--color-primary)" />
+      <Paragraph fontWeight="500">
         MobilTaxi je spolehlivá taxi služba v Jablonci nad Nisou, která vám
         nabízí pohodlnou a rychlou dopravu po městě i okolí. Naše profesionální
         řidiči vám zajistí bezpečnou jízdu a vždy vám vyjdou vstříc. Využijte
         naší služby a užijte si komfortní cestu.
-      </p>
+      </Paragraph>
       <ul className={styles.serviceList}>
         <li className={styles.serviceItem}>
           <svg
@@ -57,7 +60,15 @@ export default function Services() {
           <p className={styles.serviceDescription}>"Kurýrní služba"</p>
         </li>
       </ul>
-      <button className={styles.button}>Služby</button>
+      <Button
+        text="Služby"
+        border="1px solid var(--primary, #fbc02c)"
+        inlinePadding="3rem"
+        background="none"
+        color="var(--light)"
+        hoverBorder="1px solid var(--light, #ffffff)"
+        
+      />
       <figure className={styles.figure}>
         <img
           className={styles.image}
@@ -67,7 +78,9 @@ export default function Services() {
           height="1080"
           loading="lazy"
         />
-        <figcaption className={styles.caption}>Mobil Taxi Jablonec nad Nisou, Škoda Superb L&K</figcaption>
+        <figcaption className={styles.caption}>
+          Mobil Taxi Jablonec nad Nisou, Škoda Superb L&K
+        </figcaption>
       </figure>
       <figure className={styles.figure}>
         <img

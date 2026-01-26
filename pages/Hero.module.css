@@ -13,20 +13,3 @@
 .title {
   color: var(--primary, #fbc02c);
 }
-.description {
-  font-size: 1.125rem;
-}
-.button {
-  color: var(--dark, #000000);
-  background-color: var(--primary, #fbc02c);
-  border-radius: 100rem;
-  font-size: 1.125rem;
-  padding: 1rem 2rem;
-  width: fit-content;
-  border: none;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-.button:hover {
-  background-color: var(--light-gray, #818a99);
-}
