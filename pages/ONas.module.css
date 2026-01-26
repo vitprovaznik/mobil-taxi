@@ -1,0 +1,44 @@
+.onas{
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.title {
+  font-size: clamp(2.1875rem, 1.75rem + 2.27vw, 3.4375rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  padding-top: 2rem;
+}
+.content{
+    text-align: start;
+    margin-top: 3rem;
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.image{
+    border-radius: 1rem;
+    margin-block: 2rem;
+}
+.imageContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+@media screen and (min-width: 600px) {
+    .flexRow{
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .flexRow:last-child{
+        width: 70%;
+        flex-grow: 1;
+    }
+    .flexRow2{
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+}

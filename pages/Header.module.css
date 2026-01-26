@@ -1,28 +1,171 @@
-.header{
+.headerContainer {
+  background-color: var(--dark-gray, #222222);
+}
+.header {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.title {
+  font-size: 1rem;
+  max-width: 220px;
+  font-weight: 600;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  display: none;
+}
+.navItem a {
+  color: var(--light-gray);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.navItem .active {
+  color: var(--primary, #fbc02c);
+}
+.navItem a:hover {
+  color: white;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  z-index: 1001; /* Above mobile menu */
+  position: relative;
+}
+.line {
+  height: 2px;
+  width: 20px;
+  background-color: white;
+  border-radius: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger Animation */
+.hamburger.open .line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Backdrop Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  /* backdrop-filter: blur(2px); */
+}
+
+.overlayOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Menu Styles */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 75%;
+  background-color: var(--dark-gray, #222222);
+  padding: 6rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  border-left: 1px solid #333;
+  z-index: 1000;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.mobileMenu.menuOpen {
+  transform: translateX(0);
+}
+
+/* Navigation List inside mobile menu */
+.mobileList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.mobileList a {
+  text-decoration: none;
+  color: var(--light-gray);
+  font-weight: 600;
+  display: block;
+}
+
+.mobileList a.active {
+  color: var(--primary, #fbc02c);
+}
+
+/* Separator Line */
+.separator {
+  height: 1px;
+  background-color: #444;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+/* Phone Number Button */
+.mobilePhone {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--primary, #fbc02c);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.mobilePhone svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 900px) {
+  .navList {
     display: flex;
-    background-color: var(--dark-gray, #222222);
-    align-items: center;
-    justify-content: space-between;
-    padding: .5rem 1rem;
-}
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-.title{
-    font-size: 1rem;
-    max-width: 220px;
-    font-weight: 600;
-}
-.hamburger{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-.line{
-    height: 2px;
-    width: 20px;
-    background-color: white;
-    border-radius: 1px;
+  }
+  .hamburger {
+    display: none;
+  }
 }

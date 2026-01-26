@@ -1,12 +1,11 @@
 .pricing {
+  max-width: 1200px;
+  margin: 0 auto;
   margin-top: 6rem;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-.title {
-  color: var(--primary, #fbc02c);
 }
 .serviceList{
     list-style-type:none;
@@ -29,4 +28,29 @@
 .serviceIcon{
     font-size: 1.5rem;
     color: var(--light, #ffffff);
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .pricing {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .serviceList {
+    flex-grow: 1;
+  }
+  .content {
+    width: 80%;
+    flex-grow: 1;
+  }
+  .image {
+    width: 30%;
+    flex-grow: 1;
+  }
+  .pricing{
+    padding-inline: 2rem;
+  }
 }

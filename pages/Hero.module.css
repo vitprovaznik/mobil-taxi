@@ -1,15 +1,31 @@
-.hero {
-  padding: 2rem 1rem;
-  padding-bottom: 4rem;
+.heroContainer {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000034-5d5f25d5f3/IMG-20241210-WA0005.webp?ph=f3be96abaf);
   background-size: cover;
   background-position: center;
+}
+
+.hero {
+  padding: 2rem 1rem;
+  padding-bottom: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 .title {
   color: var(--primary, #fbc02c);
+}
+
+@media screen and (min-width: 600px) {
+  .hero {
+    justify-content: center;
+    min-height: 80vh;
+    gap: 2rem;
+  }
+  .hero * {
+    width: 50%;
+  }
 }

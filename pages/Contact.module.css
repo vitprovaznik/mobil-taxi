@@ -1,0 +1,70 @@
+.contactContainer {
+  margin-top: 2rem;
+  position: relative;
+  padding: 3rem 0; /* Vertical padding on the container */
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* The blurred background applies to the full-width container */
+.contactContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://f3be96abaf.clvaw-cdnwnd.com/5a350eb63bf4ac83e4b528bf9ebebca6/200000016-c5e01c5e03/images-pexels-com-photos-5834946-pexels-photo-5834946-auto-compress-cs-tinysrgb-dpr-2-h-650-w-940.webp?ph=f3be96abaf);
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  z-index: -1;
+  transform: scale(1.1);
+}
+
+/* The inner section handles content centering */
+.contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Horizontal padding for mobile */
+}
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-paragraph {
+  margin-top: 2rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.contactItem a {
+  color: #fbc02c;
+  font-size: 1.5rem;
+}
+
+.contactItem svg {
+  margin-right: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .contactContent {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contact-paragraph {
+    width: 50%;
+    flex-grow: 1;
+  }
+  .contactDetails {
+    width: 50%;
+    flex-grow: 1;
+  }
+  .contact {
+    padding-inline: 2rem;
+  }
+}

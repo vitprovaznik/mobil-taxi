@@ -1,0 +1,28 @@
+.footer{
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    background-color: var(--dark-gray);
+}
+.footerText {
+  /* Scales effectively between 25px and 38px based on viewport width */
+  font-size: clamp(1.5625rem, 1.2rem + 1.8vw, 2.375rem);
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+.footerLink{
+    color: var(--light);
+    font-size: 1.5rem;
+}
+.footerCopy{
+    text-decoration: underline;
+    margin-top: 1.5rem;
+    width: 70%;
+    margin-inline: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-gray);
+    font-size: .8rem;
+    color: var(--light-gray);
+    max-width: 1200px;
+
+}
