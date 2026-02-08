@@ -1,4 +1,3 @@
-import Image from "next/image";
 import TopBar from "@/pages/TopBar";
 import Header from "@/pages/Header";
 import Hero from "@/pages/Hero";
