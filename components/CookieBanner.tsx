@@ -86,11 +86,7 @@ export default function CookieBanner() {
         <div className={styles.container}>
           <div className={styles.text}>
             <p>
-              Používáme cookies k personalizaci obsahu a reklam, poskytování funkcí sociálních médií a analýze naší návštěvnosti. Více informací naleznete v našich{" "}
-              <Link href="/ochrana-osobnich-udaju" className={styles.link}>
-                Zásadách ochrany osobních údajů
-              </Link>
-              .
+              Používáme cookies k personalizaci obsahu a reklam, poskytování funkcí sociálních médií a analýze naší návštěvnosti. Více informací naleznete v našich Zásadách ochrany osobních údajů .
             </p>
           </div>
           <div className={styles.actions}>
