@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Montserrat } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
+import CookieBanner from "@/components/CookieBanner";
 import "./reset.css";
 import "./globals.css";
 
@@ -15,15 +18,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Mobil Taxi Jablonec nad Nisou | Spolehlivý odvoz 24/7",
-  description:
-    "Hledáte levné a rychlé taxi v Jablonci nad Nisou? Mobil Taxi nabízí spolehlivé služby, komfortní vozy a férové ceny. Zavolejte si nás ještě dnes!",
+  description: "Hledáte levné a rychlé taxi v Jablonci nad Nisou? Mobil Taxi nabízí spolehlivé služby, komfortní vozy a férové ceny. Zavolejte si nás ještě dnes!",
   alternates: {
     canonical: "https://www.mobiltaxi.eu/",
   },
   openGraph: {
     title: "Mobil Taxi Jablonec nad Nisou | Spolehlivý odvoz 24/7",
-    description:
-      "Rychlá a pohodlná taxi služba v Jablonci a okolí. Profesionální řidiči, férové jednání a nonstop dostupnost.",
+    description: "Rychlá a pohodlná taxi služba v Jablonci a okolí. Profesionální řidiči, férové jednání a nonstop dostupnost.",
     url: "https://www.mobiltaxi.eu/",
     siteName: "Mobil Taxi Jablonec nad Nisou",
     locale: "cs_CZ",
@@ -46,10 +47,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs">
-      <body
-        className={`${montserrat.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            
+            // Default consent to denied
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'analytics_storage': 'denied'
+            });
+          `}
+        </Script>
+      </head>
+      <body className={`${montserrat.variable} ${geistMono.variable} antialiased`}>
+        <GoogleTagManager gtmId="GTM-M7L7KZW9" />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
